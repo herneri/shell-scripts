@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+
+# Create two directories, one recursively
 set -e
 
 if [[ $1 == "-c" ]] && [[ $2 ]]; then
