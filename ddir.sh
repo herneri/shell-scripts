@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
-# Create or remove two directories, one recursive
+# MKDIR: Create or remove two directories recursively
 set -e
 
 c() {
@@ -12,7 +12,7 @@ c() {
     exit 0
 }
 
-[[ $1 == "-c" ]] && [[ $2 ]] && [[ $3 ]] && c "$1" "$2" "$3"
+[ "$1" = "-c" ] && [ $2 ] && [ $3 ] && c "$1" "$2" "$3"
 
 r() {
     cd $2
@@ -23,8 +23,8 @@ r() {
     exit 0
 }
 
-[[ $1 == "-r" ]] && [[ $2 ]] && [[ $3 ]] && r "$1" "$2" "$3"
+[ "$1" = "-r" ] && [ $2 ] && [ $3 ] && r "$1" "$2" "$3"
 
-[[ $1 == "-c" ]] || [[ $1 == "-r" ]] && printf "$0: Missing directory \n" && exit 1
+[ "$1" = "-c" ] || [ "$1" = "-r" ] && printf "$0: Missing directory \n" && exit 1
 
 printf "Invalid option: '$1' \n"
