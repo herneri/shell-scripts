@@ -1,5 +1,6 @@
-My directory of scripts I've written for command line application,
-all in the Bash scripting language.
+My directory of scripts I've written for command line application.
+Most are written for POSIX compliant shells, while some are written strictly
+for Bash.
 
 Automation and task execution for various programs like docker, the GNU
 coreutils, and others can be found here.
