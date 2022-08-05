@@ -11,12 +11,10 @@ fi
 
 [ "$1" = "-c" ] && printf "Please provide a name, image, and command \n" && exit 1
 
-r() {
+if [ "$1" = "-r" ] && [ $2 ]; then
     docker kill $2
-    docker rm $2
-}
-
-[ "$1" = "-r" ] && [ $2 ] && r "$1" "$2" && exit 0
+    docker rm $2 && exit 0
+fi
 
 [ "$1" = "-r" ] && printf "Missing name \n" && exit 2
 
