@@ -11,7 +11,7 @@ while [ "$input" != "q" ]; do
 	read input
 	clear
 
-	if [ $input ] && [ $input != "q" ]; then
+	if [ "$input" != "q" ]; then
 		sh -c $cmd
 	fi
 done
