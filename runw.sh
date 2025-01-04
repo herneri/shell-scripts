@@ -12,6 +12,6 @@ while [ "$input" != "q" ]; do
 	clear
 
 	if [ $input ] && [ $input != "q" ]; then
-		bash -c $cmd
+		sh -c $cmd
 	fi
 done
