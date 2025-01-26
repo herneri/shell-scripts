@@ -1,0 +1,35 @@
+.TH hashdir 1 "01 26 2025" "herneri's shell scripts" "User commands"
+.SH NAME
+hashdir \- Generate a hash for a directory
+
+.SH SYNOPSIS
+hashdir [DIRECTORY] [OPTION]
+
+.SH DESCRIPTION
+This script recursively goes down all subdirectories, hashing each one's files and adding them
+to a list of hashes. Once there are no more subdirectories to travel or files to hash,
+the list of hashes is hashed. This creates a hash for a directory based on its contents.
+The default hash algorithm used is SHA256.
+
+.SH OPTIONS
+.LP
+.TP
+\fB\-m\fR
+Use the MD5 hash algorithm.
+.TP
+\fB\-s2\fR
+Use the SHA256 hash algorithm.
+.TP
+\fB\-s5\fR
+Use the SHA512 hash algorithm.
+
+.SH EXIT STATUS
+.LP
+0: Successful operation.
+.TP
+1: First argument is missing or it is not a directory.
+.TP
+2: Specified hash options doesn't exist.
+
+.SH AUTHOR
+Eric Hernandez (herneri@protonmail.com)

@@ -1,0 +1,28 @@
+.TH addalias 1 "01 26 2025" "herneri's shell scripts" "User commands"
+.SH NAME
+addalias \- Declare a persistant alias
+
+.SH SYNOPSIS
+addalias [NAME] [COMMAND]
+
+.SH DESCRIPTION
+Append an alias to the current shell's rc file to allow for persistance.
+
+.SH EXIT STATUS
+.LP
+0: Successful operation.
+.TP
+1: Incomplete alias, either missing a name, command, or both.
+.TP
+2: Alias with the given name already exists.
+.TP
+3: Failure to write to rc file.
+
+.SH FILES
+.LP
+~/\.<SHELL>rc
+.TP
+The rc file where the aliases are written to, where <SHELL> is the current shell that the script is interpreted by.
+
+.SH AUTHOR
+Eric Hernandez (herneri@protonmail.com)
