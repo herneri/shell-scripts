@@ -21,3 +21,9 @@ The three categories are:
 - **core**: Use the essential Unix system utilities like sha256sum, mkfs, mkdir, and others
 - **distro**: Use commands that are specific to a particular Unix-like system, such as package managers or other programs
 - **tool**: Use tools like git, docker, make, and others
+
+## Documentation
+
+There are a lot of scripts with many options, so listing them here isn't
+practical. You can find descriptions, options, and exit codes in the manpages
+located in the `docs` directory.
