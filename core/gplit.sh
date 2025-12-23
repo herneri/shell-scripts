@@ -38,4 +38,4 @@ if  [ ! -f $file_path ]; then
 fi
 
 file_content=$(cat $file_path)
-printf "$v3$file_content" > $file_path
+echo -E -n "$v3$file_content" > $file_path
